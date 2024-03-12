@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ejercicio 7</title>
+    <link
+      rel="shortcut icon"
+      href="https://img.icons8.com/ios-glyphs/30/pinguin--v1.png"
+      type="image/x-icon"
+    />
+    <style>
+      label {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="number_selection">Select a number from 0 to 100!</label>
+      <input
+        name="number_selection"
+        id="number_selection"
+        type="number"
+        min="0"
+        max="100"
+        step="2"
+      /><br /><br />
+
+      <label for="not_robot">CAPTCHA: are you a robot?</label>
+      <input
+        type="checkbox"
+        id="not_robot"
+        name="not_robot"
+        checked
+      /><br /><br />
+
+      <label for="creation_date"
+        >if you are a robot, when were you created?</label
+      >
+      <input type="date" id="creation_date" name="creation_date" />
+
+      <br /><br />
+      <button disabled="disabled" title="you can't submit, you are a robot!">
+        Sumbit
+      </button>
+    </form>
+  </body>
+</html>
