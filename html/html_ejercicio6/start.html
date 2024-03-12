@@ -7,13 +7,171 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
-    <title>HTML Lesson</title>
+    <title>Sign up</title>
+    <link
+      rel="shortcut icon"
+      href="https://img.icons8.com/ios-glyphs/30/pinguin--v1.png"
+      type="image/x-icon"
+    />
     <style>
-      label {
+      p {
+        display: inline-block;
+      }
+
+      .label_block label {
         display: block;
       }
     </style>
   </head>
+  <body>
+    <form>
+      <div class="label_block">
+        <label for="email">email: <abbr title="required">*</abbr></label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="example@example.com"
+          required
+        />
+        <label for="password">password: <abbr title="required">*</abbr></label>
+        <input type="password" id="password" name="password" required />
+        <label for="first_name">
+          First Name: <abbr title="required">*</abbr>
+        </label>
+        <input id="first_name" name="first_name" required />
+        <label for="last_name">
+          Last Name: <abbr title="required">*</abbr>
+        </label>
+        <input id="last_name" name="last_name" required />
+        <label for="birth_date">Date of birth:</label>
+        <input type="date" id="birth_date" name="birth_date" />
+        <label for="telephone"
+          >Telephone number: <abbr title="required">*</abbr></label
+        >
+        <input
+          type="number"
+          placeholder="+34 666 666 666"
+          id="telephone"
+          name="telephone"
+        />
+      </div>
+      <br />
+      <fieldset>
+        <legend>Please choose a plan: <abbr title="required">*</abbr></legend>
+        <div>
+          <input
+            type="radio"
+            name="plan_selection"
+            id="free_plan"
+            value="free"
+          />
+          <label for="free_plan"
+            >Free subscription 0€/month: ads every 10 minutes</label
+          >
+        </div>
+        <br />
 
-  <body></body>
+        <fieldset>
+          <div>
+            <input
+              type="radio"
+              name="plan_selection"
+              id="bronze_plan"
+              value="bronze"
+            />
+            <label for="bronze_plan">
+              <p style="color: #cd7f32">Bronze</p>
+              subscription 3€/month: ads every 15 minutes</label
+            >
+          </div>
+          <div>
+            <input
+              type="radio"
+              name="plan_selection"
+              id="silver_plan"
+              value="silver"
+            />
+            <label for="silver_plan">
+              <p style="color: #c0c0c0">Silver</p>
+              subscription 5€/month: ads every 30 minutes</label
+            >
+          </div>
+          <div>
+            <input
+              type="radio"
+              name="plan_selection"
+              id="gold_plan"
+              value="gold"
+            />
+            <label for="gold_plan">
+              <p style="color: #ffd700">Gold</p>
+              subscription 10€/month: only 1 ad per video while watching!</label
+            >
+          </div>
+        </fieldset>
+
+        <div>
+          <input
+            type="radio"
+            name="plan_selection"
+            id="premium_plan"
+            value="premium"
+          />
+          <label for="premium_plan">
+            <p style="color: #50c878; font-size: large; font-weight: bold">
+              Premium
+            </p>
+            subscription 20€/month: enjoy the best experience with 0 ads!</label
+          >
+        </div>
+      </fieldset>
+      <br />
+      <fieldset class="label_block">
+        <legend>
+          In order to proceed with the service, please insert your credit card
+          details and billing address: <abbr title="required">*</abbr>
+        </legend>
+        <label for="credit_card_number"
+          >Card number: <abbr title="required">*</abbr></label
+        >
+        <input id="credit_card_number" name="credit_card_number" />
+
+        <label for="credit_card_expiration">
+          Card expiration date: <abbr title="required">*</abbr></label
+        >
+        <input
+          type="month"
+          id="credit_card_expiration"
+          name="credit_card_expiration"
+        />
+
+        <label for="credit_card_CVC"
+          >CVC: <abbr title="required">*</abbr></label
+        >
+        <input type="password" id="credit_card_CVC" name="credit_card_CVC" />
+      </fieldset>
+      <br />
+
+      <fieldset class="label_block">
+        <legend>Billing address: <abbr title="required">*</abbr></legend>
+
+        <label for="address">Address: <abbr title="required">*</abbr></label>
+        <input id="address" name="address" required />
+
+        <label for="city">City: <abbr title="required">*</abbr></label>
+        <input id="city" name="city" required />
+
+        <label for="postalcode"
+          >Postal code: <abbr title="required">*</abbr></label
+        >
+        <input id="postalcode" name="postalcode" required />
+
+        <label for="country">Country: <abbr title="required">*</abbr></label>
+        <input id="country" name="country" required />
+      </fieldset>
+      <br />
+      <button type="submit">Submit!</button>
+    </form>
+  </body>
 </html>
