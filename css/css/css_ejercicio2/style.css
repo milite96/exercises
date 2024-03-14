@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    background-color: black;
+}
+
+nav {  
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 10px;
+    border-bottom: 2px solid white;
+    background-color: slategrey;
+    color: rgb(223, 217, 217);
+    font-family: sans-serif;
+}
+
+h1 {
+    font-weight: 300;
+}
+
+ul {
+    border: 1px solid salmon;
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
