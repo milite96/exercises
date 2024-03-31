@@ -13,4 +13,4 @@ person2.firstName = "Simon";
 console.log(person1);
 console.log(person2);
 
-// escribir porqué person1 y person2 es lo mismo
+// person1 y person2 no son lo mismo porque en la línea 7 lo que realmente estamos señalando es que person2 es la referencia de person1, es decir, si alteramos person1 también afectaría a person2 y viceversa.
