@@ -1,5 +1,13 @@
 function uncompletedNotes(notes) {
-  // ...
+  let falseToDos = [];
+  notes.forEach((item) => {
+    item.todos.forEach((toDo) => {
+      if (toDo.done === false) {
+        falseToDos.push(toDo);
+      }
+    });
+  });
+  return falseToDos;
 }
 
 const notes = [
@@ -52,16 +60,4 @@ const notes = [
   },
 ];
 
-uncompletedNotes(notes);
-
-// console.log(notes[0].todos[0].done);
-
-// for (let index=0; index < notes.length; index++)
-
-notes.forEach((item) => {
-  item.todos.forEach((toDo) => {
-    if (toDo.done === true) {
-      console.log(toDo.done);
-    }
-  });
-});
+console.log(uncompletedNotes(notes));
