@@ -1,10 +1,19 @@
+:root {
+  --bg-color: #011212;
+  --ball-dimentions: 100px;
+  --ball-color: #ff8800;
+  --ball-radius: calc(
+    var(--ball-dimentions) / 2
+  ); /* esto lo que hace es que sin importar el valor de --ball-dimention, siempre será una circunferencia */
+}
+
 body {
-    background-color: #011212;
+  background-color: var(--bg-color);
 }
 
 .ball {
-    width: 100px;
-    height: 100px;
-    background-color: #ff8800;
-    border-radius: 50px;
+  height: var(--ball-dimentions);
+  width: var(--ball-dimentions);
+  border-radius: var(--ball-radius);
+  background-color: var(--ball-color);
 }
