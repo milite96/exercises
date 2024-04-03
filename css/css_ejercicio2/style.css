@@ -9,24 +9,64 @@ nav {
     align-items: center;
     padding: 0 10px;
     border-bottom: 2px solid white;
-    background-color: slategrey;
+    background-color: rgb(46, 41, 63);
     color: rgb(223, 217, 217);
     font-family: sans-serif;
 }
 
 h1 {
     font-weight: 300;
+    font-size: 30px;
 }
 
-ul {
-    border: 1px solid salmon;
+ul {    
     padding-left: 0;
     list-style: none;
     display: flex;
     gap: 30px;
+    font-size: 25px;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 a {
     text-decoration: none;
+    color: rgb(223, 217, 217);
+}
+
+li select {
+    background-color: rgb(46, 41, 63);
+    color: rgb(223, 217, 217);
+    height: 25px;
+    font-size: 20px;
+}
+
+li button {
+    background-color: rgb(46, 41, 63);
+    border: none;
+    color: grey;
+    font-size: 25px;
+}
+
+form input, button {
+    background-color: white;
+    height: 50px;
+    border-radius: 7px;
+}
+
+form input {
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+form button {
+    width: 100px;
+    background-color: rgb(46, 41, 63);
+    color: green;
+    border: 2px solid green;
+    font-size: 20px;
+    font-weight: 400;
 }
 
