@@ -3,9 +3,15 @@ body {
     background-color: black;
 }
 
-nav {  
+p {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
     display: flex;
-    justify-content:space-between;
+    min-height: 50px;
+    justify-content: space-between;
     align-items: center;
     padding: 0 10px;
     border-bottom: 2px solid white;
@@ -14,12 +20,16 @@ nav {
     font-family: sans-serif;
 }
 
+.hamburger-menu {
+    display: none;
+}
+
 h1 {
     font-weight: 300;
     font-size: 30px;
 }
 
-ul {    
+ul {
     padding-left: 0;
     list-style: none;
     display: flex;
@@ -28,7 +38,7 @@ ul {
     margin: 0;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 a {
@@ -50,19 +60,28 @@ li button {
     font-size: 25px;
 }
 
-form input, button {
+form input,
+button {
     background-color: white;
     height: 50px;
     border-radius: 7px;
 }
 
-form input {
+.search-container {
+    display: flex;
+    max-width: fit-content;
+    gap: 5%;
+}
+
+.form-input {
+    width: 75%;
     font-size: 20px;
     padding-left: 20px;
 }
 
-form button {
-    width: 100px;
+.search-button-container {
+    width: 25%;
+    display: inline-block;
     background-color: rgb(46, 41, 63);
     color: green;
     border: 2px solid green;
@@ -70,3 +89,46 @@ form button {
     font-weight: 400;
 }
 
+.search-icon {
+    display: none;
+}
+
+
+
+@media (max-width:860px) {
+    h1 {
+        display: none;
+    }
+
+    .search-button-container {
+        width: fit-content;
+        background-color: green;
+    }
+
+    .search-text {
+        display: none;
+    }
+
+    .search-icon {
+        display: block;
+        height: 30px;
+        width: 30px;
+    }
+}
+
+@media (max-width:768px) {
+
+    h1,
+    ul,
+    .search-container {
+        display: none;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+}
