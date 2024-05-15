@@ -10,4 +10,14 @@ for (const key of Object.keys(person)) {
   console.log(`${key}: ${person[key]}`);
 }
 
-// console.log(Object.keys(person));
+// // otra manera de hacerlo
+// for(let key in person){
+//   console.log(`${key}: ${person[key]}`);
+// }
+
+// // otra manera de hacerlo
+// for (let index = 0; index < Object.keys(person).length; index++) {
+//   console.log(`${Object.keys(person)[index]}: ${Object.values(person)[index]}`)
+// }
+
+
