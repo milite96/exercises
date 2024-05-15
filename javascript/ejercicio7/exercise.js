@@ -10,4 +10,4 @@ function printName() {
 
 setTimeout(() => {
   console.log(printName());
-}, 3000);
+}, 1000);
