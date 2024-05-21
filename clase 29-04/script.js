@@ -23,7 +23,7 @@ window.addEventListener("DOMContentLoaded", () => {
       loading.style.display = "none";
     }, 1000);
 
-    const fullUrl = window.location.href;
+    const fullUrl = window.location.href; 
 
     fullUrl === "http://127.0.0.1:5500/index.html"
       ? (container.innerHTML = `
