@@ -15,7 +15,7 @@ class Person {
         this._age = newValue;
     }
 
-    get name() {
+    get firstName() {
         return this._firstName;
     }
     get lastName() {
