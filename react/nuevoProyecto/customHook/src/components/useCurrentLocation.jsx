@@ -2,23 +2,31 @@ import { useEffect } from "react";
 import { useState } from "react";
 
 function useCurrentLocation() {
-  const [location, setLocation] = useState({
-    latitude: null,
-    longitude: null,
-    error: null,
-  });
+  const [error, setError] = useState(null)
+  const [loading, setLoading] = useState(false)
+  const [location, setLocation] = useState(null)
 
-  useEffect(() => {
+  function handleLocation() {
+    setLocation(null);
+    setError(null);
+    setLoading(false);
+
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
-          setLocation({
-            latitude: position.coords.latitude,
-            longitude: position.coords.longitude,
-            error: null,
-          });
+          setLoading(true)
+          setTimeout(() => {
+            setLocation({
+              latitude: position.coords.latitude,
+              longitude: position.coords.longitude,
+              error: null,
+            });
+            setLoading(false);
+          }, 3000);
+          console.log(position);
         },
         (error) => {
+          setError(error.message)
           setLocation({
             latitude: null,
             longitude: null,
@@ -27,16 +35,25 @@ function useCurrentLocation() {
         }
       );
     } else {
+      setError({ error: "Geolocation is not supported by this browser." })
       setLocation({
         latitude: null,
         longitude: null,
         error: "Geolocation is not supported by this browser.",
       });
     }
-  }, []);
+  }
+  // useEffect(() => {
+  //   handleLocation()
+  // }, []);
 
 
-  return location
+  return {
+    location,
+    loading,
+    error,
+    handleLocation,
+  }
 }
 
 export default useCurrentLocation

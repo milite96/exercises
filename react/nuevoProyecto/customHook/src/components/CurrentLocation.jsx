@@ -1,18 +1,19 @@
 import useCurrentLocation from "./useCurrentLocation";
 
 function CurrentLocation() {
-  const { latitude, longitude, error } = useCurrentLocation();
+  const { location, loading, error, handleLocation } = useCurrentLocation();
   return (
     <div>
       <h1>Geolocation</h1>
-      {error ? (
-        <p>Error: {error}</p>
-      ) : (
+      <button onClick={handleLocation}>Click to use location function</button>
+      {error && <p>Error: {error}</p>}
+      {location &&
         <div>
-          <p>Latitude: {latitude}</p>
-          <p>Longitude: {longitude}</p>
+          <p>Latitude: {location.latitude}</p>
+          <p>Longitude: {location.longitude}</p>
         </div>
-      )}
+      }
+      {loading && <p>Loading...</p>}
     </div>
   );
 }
