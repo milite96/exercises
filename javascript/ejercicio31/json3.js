@@ -10,6 +10,7 @@ const person1 = {
   }
 };
 
+// this method creates a shallow copy
 // const person2 = { ...person1 };
 
 const person2 = JSON.parse(JSON.stringify(person1));
