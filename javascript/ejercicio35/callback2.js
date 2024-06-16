@@ -1,5 +1,7 @@
 function repeatHello(callback) {
-setInterval(callback, 1000);
+let id = setInterval(callback, 1000);
+
 }
 
-repeatHello(() => console.log("Hello"))
+// al correr esto entra en un bucle infinito porque no tiene el clearInterval()
+repeatHello(() => console.log("Hello")); 
