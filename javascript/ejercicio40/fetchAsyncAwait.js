@@ -1,10 +1,10 @@
 async function fetchApi(){
     const fetchData = await fetch("https://jsonplaceholder.typicode.com/todos")
-    const parsedData = await fetchData.json()
-    console.log(fetchData);
-    console.log(parsedData);
+    const toDos = await fetchData.json()
 
-    return parsedData
+    return toDos
 }
 
-fetchApi();
+fetchApi()
+.then((response) => console.log(response))
+.catch((err) => {console.log(err, "el fetch falló")})
