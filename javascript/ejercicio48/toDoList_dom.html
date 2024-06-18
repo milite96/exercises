@@ -19,9 +19,9 @@
   function printTodo(array) {
     console.log(array);
     const ul = document.createElement("ul");
-    array.forEach((element) => {
+    array.forEach((toDo) => {
       const li = document.createElement("li");
-      li.textContent = element.title;
+      li.textContent = toDo.title;
       ul.appendChild(li);
     });
 
