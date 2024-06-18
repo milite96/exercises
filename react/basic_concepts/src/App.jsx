@@ -9,6 +9,7 @@ function App() {
       <Welcome name={<strong>Victor</strong>} age={27} />
       <Welcome name="John" age={36} />
       <Welcome age={80} />
+      <Welcome age={17} />
     </>
   );
 }

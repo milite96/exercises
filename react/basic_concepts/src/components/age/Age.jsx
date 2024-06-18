@@ -1,5 +1,10 @@
 function Age({ age = "unknown" }) {
-  return <li>Your age is {age}</li>;
+  return (
+    age > 18 || typeof age === "string" ?
+      <li>Your age is {age}</li>
+      :
+      <li>You are very young!</li>
+  )
 }
 
 export default Age;
