@@ -9,15 +9,14 @@ function setUserToLocalStorage(user) {
   localStorage.setItem("user", stringifyUser);
 }
 
-function getUserFromLocalStorage(user){
+function getUserFromLocalStorage(user) {
   setTimeout(() => {
-    const getUserJson = localStorage.getItem(user)
-    const parseUserInfo = JSON.parse(getUserJson)
+    const getUserJson = localStorage.getItem(user);
+    const parseUserInfo = JSON.parse(getUserJson);
     console.log(parseUserInfo);
     return parseUserInfo;
   }, 500);
 }
-
 
 setUserToLocalStorage(user);
 getUserFromLocalStorage("user");
