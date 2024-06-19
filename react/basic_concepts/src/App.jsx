@@ -1,5 +1,6 @@
 import "./App.css";
 import AlertClock from "./components/alertClock/AlertClock";
+import Counter from "./components/counter/Counter";
 
 import Welcome from "./components/welcome/Welcome";
 
@@ -11,8 +12,10 @@ function App() {
       <Welcome name="John" age={36} />
       <Welcome age={80} />
       <Welcome age={17} />
-      <br></br>
+      <br />
       <AlertClock />
+      <br />
+      <Counter initialValue={12} />
     </>
   );
 }
