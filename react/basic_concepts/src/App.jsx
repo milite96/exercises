@@ -1,6 +1,8 @@
 import "./App.css";
 import AlertClock from "./components/alertClock/AlertClock";
+import Clock from "./components/clock/Clock";
 import Counter from "./components/counter/Counter";
+import MouseClicker from "./components/mouseClicker/MouseClicker";
 
 import Welcome from "./components/welcome/Welcome";
 
@@ -16,6 +18,10 @@ function App() {
       <AlertClock />
       <br />
       <Counter initialValue={12} />
+      <br />
+      <Clock />
+      <br />
+      <MouseClicker />
     </>
   );
 }

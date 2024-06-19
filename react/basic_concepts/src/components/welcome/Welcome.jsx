@@ -1,7 +1,7 @@
 import Age from "../age/Age";
 
 function Welcome({ name = "guest", age }) {
-  console.log(age);
+  console.log(`the age prop is ${age}`);
   return (
     <ul>
       <li>Welcome, {name}!</li>
