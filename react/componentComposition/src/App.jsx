@@ -5,13 +5,12 @@ import { useContext } from 'react'
   
 function App() {
 
-  const language = useContext()
+  // const language = useContext()
 
 
   return (
     <>
-       <Container title={"hola"}/>
-       <Clock/>
+       <Container title={<Clock />}/>
     </>
   )
 }

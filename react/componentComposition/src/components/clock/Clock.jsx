@@ -15,7 +15,7 @@ const [time, setTime] = useState(new Date())
   })
   return (
     <h2>
-      The our is: {time.toLocaleTimeString()}
+      The hour is: {time.toLocaleTimeString()}
     </h2>
   );
 }
