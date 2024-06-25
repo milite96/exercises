@@ -1,12 +1,7 @@
 import './App.css'
-import Color from './components/Color'
+
 import Colors from './components/Colors'
 import ToDoList from './components/ToDoList'
-
-const object={
-  name: "azul",
-  id: "3",
-}   
 
 const toDoList = [
   {

@@ -9,13 +9,13 @@ function App() {
 
   return (
     <>
-    <BrowserRouter>
+    {/* <BrowserRouter>
     <Routes>
       <Route path='/' element />
-      < Route path='/users/:username' element={<ShowGitHubUser />}/>
+      < Route path='/users/:username' element={<ShowGitHubUser />}/> */}
       <GithubUsers/>
-      </Routes>
-    </BrowserRouter>
+      {/* </Routes>
+    </BrowserRouter> */}
     </>
   )
 }
