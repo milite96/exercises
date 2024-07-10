@@ -1,0 +1,15 @@
+Info:
+lunes
+martes
+miercoles
+viernes
+jueves
+domingo
+sabado
+lunes
+martes
+miercoles
+jueves
+viernes
+sabado
+domingo
