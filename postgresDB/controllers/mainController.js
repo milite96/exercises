@@ -10,7 +10,8 @@ async function setupDb() {
     DROP TABLE IF EXISTS planets;
     CREATE TABLE planets(
     id SERIAL NOT NULL PRIMARY KEY,
-    name VARCHAR(255) NOT NULL
+    name VARCHAR(255) NOT NULL,
+    image TEXT
     )
     `);
 
@@ -22,7 +23,7 @@ async function setupDb() {
   console.log(planets2);
 }
 
-setupDb();
+// setupDb();
 
 const planetSchema = Joi.string().alphanum();
 
@@ -31,7 +32,7 @@ const mainController = {
     res.status(200).send("Hello, World!");
   },
   getPlanets: async (req, res) => {
-    const planetList = await db.many(`SELECT * FROM planets`);
+    const planetList = await db.many(`SELECT * FROM planets ORDER BY id`);
     res.status(200).json(planetList);
   },
   getPlanetById: async (req, res) => {
@@ -58,7 +59,7 @@ const mainController = {
     }
 
     await db.none(`INSERT INTO planets (name) VALUES ($1)`, name);
-    const planetList = await db.many(`SELECT * FROM planets`);
+    const planetList = await db.many(`SELECT * FROM planets ORDER BY id`);
     res.status(201).json(planetList);
   },
   editPlanet: async (req, res) => {
@@ -75,7 +76,7 @@ const mainController = {
       Number(id),
       name,
     ]);
-    const planetList = await db.many(`SELECT * FROM planets`);
+    const planetList = await db.many(`SELECT * FROM planets ORDER BY id`);
     res.status(200).json(planetList);
   },
   deletePlanet: async (req, res) => {
@@ -84,9 +85,20 @@ const mainController = {
       (planet) => planet.id != Number(id)
     );
     await db.none(`DELETE FROM planets WHERE id = $1`, Number(id));
-    const planetList = await db.many(`SELECT * FROM planets`);
+    const planetList = await db.many(`SELECT * FROM planets ORDER BY id`);
     res.status(200).json({ msg: "success!", planetList });
   },
+  addPlanetImage: async (req, res) => {
+    const { id } = req.params;
+    // const { image } = req.body;
+    console.log(req);
+    res.send("ok")
+
+    // await db.none(`UPDATE planets SET image = $2 WHERE id = $1`, [Number(id), image])
+
+    // const planetList = await db.many(`SELECT * FROM planets ORDER BY id`);
+    // res.status(200).json(planetList);
+  }
 };
 
 module.exports = mainController;
