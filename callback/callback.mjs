@@ -9,6 +9,8 @@ const dias = [
     "sabado",
     "domingo"
 ]
+
+// Otras pruebas: 
 // writeFile("writefile.txt", "mañana no lo se", (err) => {
 //     if (err) throw err;
 //     console.log("saved!");
