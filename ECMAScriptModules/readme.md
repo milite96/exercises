@@ -1,0 +1,1 @@
+if you wanted to use .js instead of .mjs you can run "npm init -y" in order to create a package.json file and then add/modify => "type": "module";
